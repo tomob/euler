@@ -1,4 +1,4 @@
-euler
+Euler
 =====
 
-My take on Project Euler
+My take on Project Euler.
