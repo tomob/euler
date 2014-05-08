@@ -32,5 +32,6 @@ new:
 	@cat 000skeleton/Makefile | sed s/{REPLACE}/$(NUMBER)/ > $(NUMBER)/Makefile
 	@cp 000skeleton/000.cc $(NUMBER)/$(NUMBER).cc
 	@cp 000skeleton/000.hs $(NUMBER)/$(NUMBER).hs
+	@cat 000skeleton/README.md | sed s/{REPLACE}/$(NUMBER)/ > $(NUMBER)/README.md
 
 .PHONY: all clean new
