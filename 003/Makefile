@@ -1,0 +1,40 @@
+
+PROBLEM := 003
+
+all: run-all
+
+run-all: run-cc run-hs
+
+run-cc: build-cc
+	@echo Running $(PROBLEM) -- C++ version.
+	@time -p ./$(PROBLEM)-cc
+	@echo
+
+run-hs: build-hs
+	@echo Running $(PROBLEM) -- Haskell version.
+	@time -p ./$(PROBLEM)-hs
+	@echo
+
+build-cc: $(PROBLEM)-cc
+
+build-hs: $(PROBLEM)-hs
+	@cp ./dist/build/003/003 $(PROBLEM)-hs
+
+$(PROBLEM)-cc: $(PROBLEM).cc.o
+	@g++ -o $@ $<
+
+$(PROBLEM)-hs: $(PROBLEM).hs.o
+	@cabal configure
+	@cabal build
+
+clean:
+	@-rm -f *~ *.o *.hi $(PROBLEM)-cc $(PROBLEM)-hs
+	@-rm -rf ./dist
+
+%.cc.o: %.cc
+	@g++ -c -o $@ $<
+
+%.hs.o: %.hs
+	@ghc -c -o $@ $<
+
+.PHONY: all clean build-cc build-hs run-hs run-cc run-all
