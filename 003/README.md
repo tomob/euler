@@ -19,3 +19,7 @@ The first one prooved to be waaaay faster.
 
 ## C++
 
+A simple, lazy solution. Iterate over all numbers from 2 to sqare root
+of 600851475143. If the number is prime (tested with a simplistic function)
+and it divides N, mark it. After the iteration is over, print last marked
+number.
