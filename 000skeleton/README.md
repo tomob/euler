@@ -1,4 +1,3 @@
-Project Euler -- Problem {REPLACE}
-============================
+# Project Euler: Problem N -
 
-This is a stub.
+Problem's URL: 
