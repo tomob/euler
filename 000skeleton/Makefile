@@ -29,7 +29,7 @@ clean:
 	@-rm -f *~ *.o *.hi $(PROBLEM)-cc $(PROBLEM)-hs
 
 %.cc.o: %.cc
-	@g++ -c -o $@ $<
+	@g++ -std=c++11 -c -o $@ $<
 
 %.hs.o: %.hs
 	@ghc -c -o $@ $<
