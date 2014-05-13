@@ -18,12 +18,14 @@ run-hs: build-hs
 build-cc: $(PROBLEM)-cc
 
 build-hs: $(PROBLEM)-hs
+	@cp ./dist/build/$(PROBLEM)/$(PROBLEM) $(PROBLEM)-hs
 
 $(PROBLEM)-cc: $(PROBLEM).cc.o
 	@g++ -o $@ $<
 
 $(PROBLEM)-hs: $(PROBLEM).hs.o
-	@ghc -o $@ $<
+	@cabal configure
+	@cabal build
 
 clean:
 	@-rm -f *~ *.o *.hi $(PROBLEM)-cc $(PROBLEM)-hs

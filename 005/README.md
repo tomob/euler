@@ -12,3 +12,7 @@ It would be interesting to write a program to solve it for any number N.
 
 I've implemented exactly the above algorithm. It is an exercise of
 using C++'s `multiset`, `set_union` and `accumulate`.
+
+## Haskell
+
+Once again, the elegance of Haskell code leaves me in awe.
