@@ -8,3 +8,6 @@ Iterate j from 5 to length of the string, convert character from
 j-5..j, multiply them, and finally select the maximum number.
 
 ## Haskell
+
+The idea is the same, but expressed in functional terms, as a
+transformation of lists.
