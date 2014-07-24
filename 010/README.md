@@ -6,3 +6,6 @@ Problem's URL: https://projecteuler.net/problem=10
 
 Another two-liner.
 
+## C++
+
+Nothing fancy.
